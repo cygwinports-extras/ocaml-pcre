@@ -1,0 +1,67 @@
+ocaml-pcre
+------------------------------------------
+This OCaml-library interfaces the PCRE (Perl-compatibility regular
+expressions) library which is written in C. it can be used for matching
+regular expressions which are written in PERL-style.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  libpcre0-7.4-2
+  ocaml-3.10.0-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.25-7
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  ocaml-findlib-1.2.1-1
+
+Canonical website:
+  http://www.ocaml.info/home/ocaml_sources.html
+
+Canonical download:
+  http://www.ocaml.info/ocaml_sources/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocaml-pcre-5.12.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocaml-pcre-5.12.2-X.cygport all
+
+This will create:
+  /usr/src/ocaml-pcre-5.12.2-X-src.tar.bz2
+  /usr/src/ocaml-pcre-5.12.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ocaml/3.10/pcre/META
+  /usr/lib/ocaml/3.10/pcre/libpcre_stubs.a
+  /usr/lib/ocaml/3.10/pcre/pcre.a
+  /usr/lib/ocaml/3.10/pcre/pcre.cma
+  /usr/lib/ocaml/3.10/pcre/pcre.cmi
+  /usr/lib/ocaml/3.10/pcre/pcre.cmxa
+  /usr/lib/ocaml/3.10/pcre/pcre.mli
+  /usr/lib/ocaml/3.10/stublibs/dllpcre_stubs.so
+  /usr/lib/ocaml/3.10/stublibs/dllpcre_stubs.so.owner
+  /usr/share/doc/ocaml-pcre-5.12.2/Changes
+  /usr/share/doc/ocaml-pcre-5.12.2/INSTALL
+  /usr/share/doc/ocaml-pcre-5.12.2/LICENSE
+  /usr/share/doc/ocaml-pcre-5.12.2/README
+
+------------------
+
+Port Notes:
+
+----- version 5.12.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
