@@ -1,6 +1,0 @@
-category: OCaml
-requires: libpcre1 libpcre-devel ocaml
-sdesc: "OCaml PCRE bindings"
-ldesc: "This OCaml-library interfaces the PCRE (Perl-compatibility regular
-expressions) library which is written in C. it can be used for matching
-regular expressions which are written in PERL-style."

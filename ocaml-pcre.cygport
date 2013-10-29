@@ -1,0 +1,27 @@
+inherit ocaml
+
+NAME="ocaml-pcre"
+VERSION=7.0.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="OCaml PCRE bindings"
+DESCRIPTION="This OCaml-library interfaces the PCRE (Perl-compatibility regular
+expressions) library which is written in C. it can be used for matching
+regular expressions which are written in PERL-style."
+HOMEPAGE="http://www.ocaml.info/software.html"
+SRC_URI="https://bitbucket.org/mmottl/pcre-ocaml/downloads/pcre-ocaml-${VERSION}.tar.gz"
+SRC_DIR="pcre-ocaml-${VERSION}"
+if defined ARCH_x86_64; then
+PATCH_URI="7.0.2-static.patch"
+fi
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake all -j1
+}
+
+src_test() {
+	cd ${B}
+	cygmake examples
+}
